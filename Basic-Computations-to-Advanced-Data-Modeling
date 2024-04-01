@@ -1,4 +1,4 @@
-# Problem 1
+# Code 1
 v1 <- 1:5
 v2 <- c(2, 4, 6, 8)
 # v1 + v2: Warning message that stated longer object length is not a multiple of shorter object length. 
@@ -12,7 +12,7 @@ print(v5)
 SumResults <- sum(v5)
 print(SumResults)
 
-# Problem 2
+# Code 2
 RatingLevels <- c("Poor", "Medium", "Great")
 RatingData <- c("Great", "Great", "Medium", "Great", "Medium")
 RatingFactor <- factor(RatingData, levels = RatingLevels, ordered = TRUE)
@@ -26,7 +26,7 @@ DummyVariables <- model.matrix(~ RatingFactor - 1)
 print("Dummy Variables:")
 print(DummyVariables)
 
-# Problem 3
+# Code 3
 HighTemp <- c(75, 78, 72, 77, 80)
 LowTemp <- c(63, 59, 60, 63, 65)
 DayOfWeek <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
@@ -47,7 +47,7 @@ print(TemperatureDF)
 print("Tuesday and Thursday Rows:")
 print(TemperatureDF[c("Tuesday", "Thursday"), ])
 
-# Problem 4
+# Code 4
 MatrixData1 <- 6:1
 MatrixData2 <- 1:9
 Mat1 <- matrix(MatrixData1, nrow = 2, ncol = 3, byrow = TRUE)
