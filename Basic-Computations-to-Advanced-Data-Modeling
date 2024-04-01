@@ -1,0 +1,58 @@
+# Problem 1
+v1 <- 1:5
+v2 <- c(2, 4, 6, 8)
+# v1 + v2: Warning message that stated longer object length is not a multiple of shorter object length. 
+v3 <- c(v2, 10)
+v4 <- v1 + v3
+print(v4)
+v5 <- v4[-c(1, length(v4))]
+print(v5)
+names(v5) <- c("First:", "Second:", "Third:")
+print(v5)
+SumResults <- sum(v5)
+print(SumResults)
+
+# Problem 2
+RatingLevels <- c("Poor", "Medium", "Great")
+RatingData <- c("Great", "Great", "Medium", "Great", "Medium")
+RatingFactor <- factor(RatingData, levels = RatingLevels, ordered = TRUE)
+print("min(RatingFactor):")
+print(min(RatingFactor))
+print("max(RatingFactor):")
+print(max(RatingFactor))
+print("as.integer(RatingFactor):")
+print(as.integer(RatingFactor))
+DummyVariables <- model.matrix(~ RatingFactor - 1)
+print("Dummy Variables:")
+print(DummyVariables)
+
+# Problem 3
+HighTemp <- c(75, 78, 72, 77, 80)
+LowTemp <- c(63, 59, 60, 63, 65)
+DayOfWeek <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+TemperatureDF <- data.frame(High = HighTemp, Low = LowTemp)
+rownames(TemperatureDF) <- DayOfWeek
+print("TemperatureDF:")
+print(TemperatureDF)
+highSD <- sd(TemperatureDF$High)
+print("Standard Deviation of High Temperature:")
+print(highSD)
+lowM <- mean(TemperatureDF$Low)
+print("Average of Low Temperature:")
+print(lowM)
+TemperatureDF["Monday", "High"] <- 76
+TemperatureDF["Friday", "Low"] <- 60
+print("Corrected TemperatureDF:")
+print(TemperatureDF)
+print("Tuesday and Thursday Rows:")
+print(TemperatureDF[c("Tuesday", "Thursday"), ])
+
+# Problem 4
+MatrixData1 <- 6:1
+MatrixData2 <- 1:9
+Mat1 <- matrix(MatrixData1, nrow = 2, ncol = 3, byrow = TRUE)
+Mat2 <- matrix(MatrixData2, nrow = 3, ncol = 3, byrow = FALSE)
+MatMul <- Mat1 %*% Mat2
+print("Matrix Multiplication Result (MatMul):")
+print(MatMul)
+
